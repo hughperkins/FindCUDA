@@ -4,11 +4,11 @@ Activates incremental builds for [cutorch](https://github.com/torch/cutorch) and
 
 ## How to use?
 
-eg:
+Make sure you have [torch](https://github.com/torch/distro.git) installed
+
+Then do simply:
 ```
-git clone https://github.com/hughperkins/FindCUDA.git
-cd FindCUDA
-luarocks make rocks/findcuda-scm-1.rockspec
+luarocks install findcuda
 ```
 That's it!  cutorch and cunn builds will now be incremental :-)  It's a bit draft, so worst case if something
 is not building fully, just:
@@ -22,6 +22,7 @@ is not building fully, just:
 - copied Modules/FindCUDA.cmake and Modules/FindCUDA/ folders
 - applied a custom fix to allow incremental builds on cutorch, and cunn (might not generalize for other
 software)
+- added appropriate rocks file and CMakeLists.txt so installable as luarocks module
 
 ## FAQ
 
