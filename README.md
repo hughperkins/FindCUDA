@@ -26,6 +26,6 @@ and when upstream is fixed, and a new version of cmake is available
 
 ## Where can I find out more about FindCUDA?
 
-The documentation for FindCUDA is at https://cmake.org/cmake/help/v3.0/module/FindCUDA.html  The author
+The documentation for FindCUDA is at https://cmake.org/cmake/help/v3.5/module/FindCUDA.html  The author
 of the uncustomized FindCUDA module is James Bigler.
 
