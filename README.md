@@ -24,3 +24,8 @@ software)
 working on it :-)  This repo might evolve appropriately as a function of this, or disappear eventually, as
 and when upstream is fixed, and a new version of cmake is available
 
+## Where can I find out more about FindCUDA?
+
+The documentation for FindCUDA is at https://cmake.org/cmake/help/v3.0/module/FindCUDA.html  The author
+of the uncustomized FindCUDA module is James Bigler.
+
