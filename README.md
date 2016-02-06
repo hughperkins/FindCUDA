@@ -1,11 +1,8 @@
 # FindCUDA
-FindCUDA module for cmake
-
-## What is this?
 
 Activates incremental builds for [cutorch](https://github.com/torch/cutorch) and [cunn](https://github.com/torch/cunn)
 
-## How to use this?
+## How to use?
 
 eg:
 ```
@@ -26,15 +23,17 @@ is not building fully, just:
 - applied a custom fix to allow incremental builds on cutorch, and cunn (might not generalize for other
 software)
 
-## Why not just use the Ubuntu standard FindCUDA?
+## FAQ
+
+### Why not just use the Ubuntu standard FindCUDA?
 
 - doesnt contain the fix for incremental builds on cutorch
 
-## Why not just download the gz directly?
+### Why not just download the gz directly?
 
 - doesnt contain the fix for incremental builds on cutorch
 
-## Why not push the fix upstream into cmake?
+### Why not push the fix upstream into cmake?
 
 working on it :-)  This repo might evolve appropriately as a function of this, or disappear eventually, as
 and when upstream is fixed, and a new version of cmake is available
@@ -47,5 +46,4 @@ MIT
 
 The documentation for FindCUDA is at https://cmake.org/cmake/help/v3.5/module/FindCUDA.html  The author
 of the uncustomized FindCUDA module is James Bigler.
-
 
