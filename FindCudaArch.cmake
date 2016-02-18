@@ -1,7 +1,7 @@
 # Borrowed from caffe
 # https://github.com/BVLC/caffe/blob/master/cmake/Cuda.cmake
 
-# Known NVIDIA GPU achitectures Torch can be compiled for.
+# Known NVIDIA GPU achitectures
 # This list will be used for CUDA_ARCH_NAME = All option
 SET(KNOWN_GPU_ARCHITECTURES "3.0 3.5 5.0 5.2")
 
