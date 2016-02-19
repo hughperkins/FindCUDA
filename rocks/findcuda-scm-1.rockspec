@@ -16,7 +16,7 @@ description = {
 build = {
    type = "command",
    build_command = [[
-cmake -E make_directory build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$(SCRIPTS_DIR)/.." && $(MAKE) install
+cmake -E make_directory build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_SUBDIR="${CMAKE_INSTALL_SUBDIR}" -DCMAKE_INSTALL_PREFIX="$(SCRIPTS_DIR)/.." && $(MAKE) install
 ]],
    install_command = "cd build"
 }
