@@ -1474,9 +1474,7 @@ macro(CUDA_WRAP_SRCS cuda_target format generated_files)
       add_custom_command(
         OUTPUT ${generated_file}
         # These output files depend on the source_file and the contents of cmake_dependency_file
-      #  ${main_dep}
         DEPENDS ${CUDA_NVCC_DEPEND}
-      #  DEPENDS ${custom_target_script}
         # Make sure the output directory exists before trying to write to it.
         COMMAND ${CMAKE_COMMAND} -E make_directory "${generated_file_path}"
         COMMAND ${CMAKE_COMMAND} ARGS
