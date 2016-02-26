@@ -12,4 +12,5 @@ INSTALL(FILES
   "${CMAKE_CURRENT_SOURCE_DIR}/FindCUDA/make2cmake.cmake"
   "${CMAKE_CURRENT_SOURCE_DIR}/FindCUDA/parse_cubin.cmake"
   "${CMAKE_CURRENT_SOURCE_DIR}/FindCUDA/run_nvcc.cmake"
+  "${CMAKE_CURRENT_SOURCE_DIR}/FindCUDA/select_compute_arch.cmake"
   DESTINATION "${CMAKE_INSTALL_SUBDIR}/FindCUDA")
