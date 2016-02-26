@@ -1,12 +1,14 @@
 # FindCUDA
 
-Activates incremental builds for [cutorch](https://github.com/torch/cutorch) and [cunn](https://github.com/torch/cunn)
+Purpose of installing this package (or Lua rock) is to work around a dependency bug in CMake that forces all .cu files be
+unconditionally recompiled.
+Installing this package in a directory coming in Cmake module path before the system cmake, will fix the issue.
+
+Cmake versions: the bug is there as of Cmake 2.8/3.5. Expecting official fix in 3.51 - not sure about 2.8 backport.
 
 ## How to use?
 
-Make sure you have [torch](https://github.com/torch/distro.git) installed
-
-Then do simply:
+If you are using it for Torch, then do simply:
 ```
 luarocks install findcuda
 ```
@@ -14,6 +16,9 @@ That's it!  cutorch and cunn builds will now be incremental :-)  It's a bit draf
 is not building fully, just:
 - (ideally) zip your cutorch directory, and send it to me somehow, so I can take a look
 - `rm -Rf build`
+
+If you are using it for other projects, just use regilar Cmake build:
+(cmake -E make_directory build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$(YOUR_PROJECT_INSTALL_ROOT)" && $(MAKE) install)
 
 ## How this source-code was obtained?
 
@@ -28,23 +33,20 @@ software)
 
 ### Why not just use the Ubuntu standard FindCUDA?
 
-- doesnt contain the fix for incremental builds on cutorch
-
-### Why not just download the gz directly?
-
-- doesnt contain the fix for incremental builds on cutorch
+- Ubintu comes with CMake 2.8 which has the dependency issue with CUDA .cu files.
 
 ### Why not push the fix upstream into cmake?
 
-working on it :-)  This repo might evolve appropriately as a function of this, or disappear eventually, as
+We did :-)
+Expecting official fix to come out with CMake 3.51 - not sure about 2.8 backport.
+This repo might evolve appropriately as a function of this, or disappear eventually, as
 and when upstream is fixed, and a new version of cmake is available
 
 ## License
 
 MIT
 
-## Where can I find out more about FindCUDA?
+## Where can I find out general informtion about FindCUDA module of CMake?
 
 The documentation for FindCUDA is at https://cmake.org/cmake/help/v3.5/module/FindCUDA.html  The author
-of the uncustomized FindCUDA module is James Bigler.
-
+of the original FindCUDA module is James Bigler.
