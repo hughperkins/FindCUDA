@@ -1,3 +1,4 @@
+#.rst:
 # FindCUDA
 # --------
 #
@@ -1013,7 +1014,6 @@ endmacro()
 cuda_find_helper_file(parse_cubin cmake)
 cuda_find_helper_file(make2cmake cmake)
 cuda_find_helper_file(run_nvcc cmake)
-#cuda_find_helper_file(select_compute_arch cmake)
 
 ##############################################################################
 # Separate the OPTIONS out from the sources
